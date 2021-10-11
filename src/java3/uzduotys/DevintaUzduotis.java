@@ -34,7 +34,7 @@ public class DevintaUzduotis {
         } catch (FileNotFoundException e) {
             System.out.println("Nerasta");
         } catch (IOException e) {
-            System.out.println("Netiketa");
+            System.out.println("Netiketa klaida");
         }
     }
 }
