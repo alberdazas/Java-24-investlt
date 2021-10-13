@@ -11,6 +11,7 @@ public class Uzduotys {
         int[] didesniSkaiciaiUzVidurki = new int[0];
         int[] neigiamiSkaiciai = new int[0];
         int[] pasikartojantysSkaiciai = new int[0];
+        int[] surikiuotasMasyvas = new int[0];
 
         try {
             br = new BufferedReader(new FileReader("src/java4/uzduotys/duomenys.txt"));
@@ -95,13 +96,25 @@ public class Uzduotys {
         }
 
         boolean arEgzistuojaTrys = false;
-        for(int i = 0; i < masyvas.length; i++) {
-            if(masyvas[i] == 3) {
+        for (int i = 0; i < masyvas.length; i++) {
+            if (masyvas[i] == 3) {
                 arEgzistuojaTrys = true;
                 break;
             }
         }
 
+        surikiuotasMasyvas = Arrays.copyOf(masyvas, masyvas.length);
+        int laikinas;
+
+        for (int i = 0; i < surikiuotasMasyvas.length; i++) {
+            for (int j = 1; j < surikiuotasMasyvas.length - i; j++) {
+                if (surikiuotasMasyvas[j - 1] > surikiuotasMasyvas[j]) {
+                    laikinas = surikiuotasMasyvas[j - 1];
+                    surikiuotasMasyvas[j - 1] = surikiuotasMasyvas[j];
+                    surikiuotasMasyvas[j] = laikinas;
+                }
+            }
+        }
 
 
         try {
@@ -158,17 +171,22 @@ public class Uzduotys {
             bw.newLine();
             bw.write("9. Ar egzistuoja skaicius 3 ?");
             bw.newLine();
-            if(arEgzistuojaTrys) {
+            if (arEgzistuojaTrys) {
                 bw.write("Taip");
             } else {
                 bw.write("Ne");
+            }
+            bw.newLine();
+            bw.write("10. Surikiuotas masyvas:");
+            bw.newLine();
+            for(int i = 0; i < surikiuotasMasyvas.length; i++){
+                bw.write(surikiuotasMasyvas[i] + " ");
             }
 
             bw.close();
         } catch (IOException e) {
             System.out.println("Kazkas netiketo rasyme");
         }
-
 
     }
 
