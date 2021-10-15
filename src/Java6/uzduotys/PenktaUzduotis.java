@@ -19,6 +19,7 @@ public class PenktaUzduotis {
     static int[] iterptiElementa(int[] masyvas, int reiksme, int vieta) {
         if(masyvas.length < vieta) {
 //            Susikurti savo arba patikrinti jei toks exception egzistuoja
+            // src/Java6/MusuException.java pavyzdys
 //            throws new ArrayNotBigEnoughException();
             System.out.println("Nera tokios vietos");
             return masyvas;
