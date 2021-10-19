@@ -1,0 +1,5 @@
+2 -1 4 5 3 2 -5 -8 12 13 
+Suma = 27
+Vidurkis = 2.7
+Maziausia reiksme = -8
+Didziausia reiksme = 13

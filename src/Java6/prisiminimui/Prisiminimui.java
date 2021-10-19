@@ -46,12 +46,6 @@ public class Prisiminimui {
         return array;
     }
 
-    static void printArray(int[] array) {
-        for(int a: array) {
-            System.out.println(a + " ");
-        }
-    }
-
     static int sum(int[] array) {
         int sum = 0;
         for(int a: array) {
@@ -89,10 +83,24 @@ public class Prisiminimui {
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter(filePath));
             printArray(bw, array);
+            bw.newLine();
+            bw.write("Suma = " + sum);
+            bw.newLine();
+            bw.write("Vidurkis = " + average);
+            bw.newLine();
+            bw.write("Maziausia reiksme = " + minValue);
+            bw.newLine();
+            bw.write("Didziausia reiksme = " + maxValue);
 
             bw.close();
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    static void printArray(int[] array) {
+        for(int a: array) {
+            System.out.println(a + " ");
         }
     }
 
