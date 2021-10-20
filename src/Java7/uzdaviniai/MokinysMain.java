@@ -19,6 +19,7 @@ public class MokinysMain {
 
         Mokinys geriausiaiBesimokantis = gautiGeriausiaiBesimokanti(mokiniai);
         System.out.println(geriausiaiBesimokantis);
+        spausdintiKlases(mokiniai);
     }
 
     static Mokinys sukurtiMokini(String vardas, String pavarde, String klase, int[] pazymiai) {
@@ -33,5 +34,11 @@ public class MokinysMain {
             }
         }
         return geriausiaiBesimokantis;
+    }
+
+    static void spausdintiKlases(Mokinys[] x) {
+        for(int i = 0; i < x.length; i++) {
+            System.out.println(x[i].getKlase());
+        }
     }
 }
