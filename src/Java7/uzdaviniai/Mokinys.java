@@ -12,6 +12,13 @@ public class Mokinys {
         this.klase = klase;
         this.pazymiuMasyvas = pazymiuMasyvas;
     }
+    // Rugsejo 1 konstruktorius
+    public Mokinys(String vardas, String pavarde, String klase) {
+        this.vardas = vardas;
+        this.pavarde = pavarde;
+        this.klase =klase;
+        this.pazymiuMasyvas = new int[0];
+    }
 
     public String getVardas() {
         return vardas;
