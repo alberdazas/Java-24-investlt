@@ -49,4 +49,14 @@ public class StatusisTrikampis extends Figura {
     public double plotas() {
         return x * y / 2;
     }
+
+    @Override
+    public double ilgiausiaKrastine() {
+        if(x > y && x > z) {
+            return x;
+        } else if(y > z) {
+            return y;
+        }
+        return z;
+    }
 }

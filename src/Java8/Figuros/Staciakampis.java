@@ -39,4 +39,12 @@ public class Staciakampis extends Figura {
     public double plotas() {
         return x * y;
     }
+
+    @Override
+    public double ilgiausiaKrastine() {
+        if(x > y) {
+            return x;
+        }
+        return y;
+    }
 }

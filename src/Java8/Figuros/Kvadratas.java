@@ -31,4 +31,9 @@ public class Kvadratas extends Figura {
 //        return Math.pow(x, 2);
     }
 
+    @Override
+    public double ilgiausiaKrastine() {
+        return x;
+    }
+
 }

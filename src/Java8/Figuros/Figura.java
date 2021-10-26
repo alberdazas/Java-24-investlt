@@ -13,4 +13,8 @@ public class Figura {
     public double plotas() {
         return 0;
     }
+
+    public double ilgiausiaKrastine() {
+        return 0;
+    }
 }

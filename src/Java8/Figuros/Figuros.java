@@ -1,9 +1,6 @@
 package Java8.Figuros;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.Arrays;
 
 public class Figuros {
@@ -85,14 +82,67 @@ public class Figuros {
     }
 
     public Figura didziausiasPerimetras() {
-        return null;
+        Figura didziausias = figuros[0];
+        for(int i = 1; i < figuros.length; i++) {
+            if(didziausias.perimetras() < figuros[i].perimetras()) {
+                didziausias = figuros[i];
+            }
+        }
+        return didziausias;
     }
 
     public Figura ilgiausiaKrastine() {
-        // Suksim cikla per figuros masyva
-        // Su instanceOf patikrinsime objekto tipo
-        // Pagal objekto tipa rasim didziausia krastine
-        // Lyginsim su turima ilgiausia krastine
-        return null;
+        Figura ilgiausia = null;
+        double krastinesIlgis = 0;
+
+        for(int i = 0; i < figuros.length; i++) {
+
+            if(figuros[i] instanceof Kvadratas) {
+//                ((Kvadratas)figuros[i]).getX()
+                Kvadratas kvadratas = (Kvadratas) figuros[i];
+                if(krastinesIlgis < kvadratas.getX()) {
+                    ilgiausia = kvadratas;
+                    krastinesIlgis = kvadratas.getX();
+                }
+            } else if(figuros[i] instanceof Staciakampis) {
+                Staciakampis staciakampis = (Staciakampis) figuros[i];
+                if(krastinesIlgis < staciakampis.getX()) {
+                    ilgiausia = staciakampis;
+                    krastinesIlgis = staciakampis.getX();
+                }
+
+                if(krastinesIlgis < staciakampis.getY()) {
+                    ilgiausia = staciakampis;
+                    krastinesIlgis = staciakampis.getY();
+                }
+            } else if(figuros[i] instanceof StatusisTrikampis) {
+                StatusisTrikampis statusisTrikampis = (StatusisTrikampis) figuros[i];
+                if(krastinesIlgis < statusisTrikampis.getX()) {
+                    ilgiausia = statusisTrikampis;
+                    krastinesIlgis = statusisTrikampis.getX();
+                }
+
+                if(krastinesIlgis < statusisTrikampis.getY()) {
+                    ilgiausia = statusisTrikampis;
+                    krastinesIlgis = statusisTrikampis.getY();
+                }
+
+                if(krastinesIlgis < statusisTrikampis.getZ()) {
+                    ilgiausia = statusisTrikampis;
+                    krastinesIlgis = statusisTrikampis.getZ();
+                }
+            }
+        }
+        return ilgiausia;
+    }
+
+    public Figura ilgiausiaKrastineGeresnis() {
+        Figura didziausias = figuros[0];
+        for(int i = 1; i < figuros.length; i++) {
+            if(didziausias.ilgiausiaKrastine() < figuros[i].ilgiausiaKrastine()) {
+                didziausias = figuros[i];
+            }
+        }
+        return didziausias;
     }
 }
