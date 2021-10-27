@@ -1,0 +1,6 @@
+S Andrius Jonaitis 24 2 Informatika
+D Jonas Jonaitis 32 6 Vadybininkas
+S Petras Petraitis 30 4 Vadyba
+D Petras Kazlauskas 40 10 Stalius
+D Vytautas Siskauskas 55 20 Daininkas
+D Vytautas Sustauskas 60 0 Bedarbis
