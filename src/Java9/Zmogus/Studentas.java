@@ -27,8 +27,10 @@ public class Studentas extends Zmogus {
         this.studijuKryptis = studijuKryptis;
     }
 
+    @Override
     public String gautiZmogausInformacija() {
-        return getVardas() + " " + getPavarde() + " " + getAmzius();
+        return getVardas() + " " + getPavarde() + " " + getAmzius()
+                + " " + getStudijuKryptis() + " " + getKursas();
     }
 
     // toString() ir panaudoti gautiZmogausInformacija()
