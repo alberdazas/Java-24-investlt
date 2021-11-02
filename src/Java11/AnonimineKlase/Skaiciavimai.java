@@ -4,6 +4,6 @@ public interface Skaiciavimai {
     void suma(Integer a, Integer b);
 
     default Double plotas(Integer a, Integer b) {
-        return (double)a*b;
+        return 1.0 * a * b;
     }
 }

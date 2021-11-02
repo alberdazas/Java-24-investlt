@@ -7,13 +7,19 @@ public class Main {
         Scanner out = new Scanner(System.in);
         System.out.println("Iveskite skaiciu");
         Integer skaicius = out.nextInt();
+
         if(skaicius > 0) {
             class A {
                 public A() {
                     System.out.println("Daugiau uz nuli");
                 }
+
+                void spausdinti() {
+                    System.out.println("Labas vakaras");
+                }
             }
             A obj = new A();
+            obj.spausdinti();
         } else {
             class B {
                 public B() {
@@ -22,6 +28,7 @@ public class Main {
             }
             B obj = new B();
         }
+
     }
 
 
