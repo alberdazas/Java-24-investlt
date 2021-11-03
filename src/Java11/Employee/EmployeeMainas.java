@@ -1,5 +1,7 @@
 package Java11.Employee;
 
+import Java9.Figuros.Figura;
+
 public class EmployeeMainas {
 
     public static void main(String[] args) {
@@ -19,18 +21,25 @@ public class EmployeeMainas {
 //        increaseSalary(darbuotojai);
 //        spausdinti(darbuotojai);
 
-        Payment increaseTenPercent = new Payment() {
-            @Override
-            public double increaseSalary(double salary) {
-                return salary * 1.1;
-            }
-        };
-
-        increaseSalary(darbuotojai, increaseTenPercent);
-        spausdinti(darbuotojai);
+//        Payment increaseTenPercent = new Payment() {
+//            @Override
+//            public double increaseSalary(double salary) {
+//                return salary * 1.1;
+//            }
+//        };
+//
+//        increaseSalary(darbuotojai, increaseTenPercent);
+//        spausdinti(darbuotojai);
 
         // Parasyti anonimine klase kuri padidina atlyginima 100eu
-
+        Payment increaseHundredEuros = new Payment() {
+            @Override
+            public double increaseSalary(double salary) {
+                return salary + 100;
+            }
+        };
+        increaseSalary(darbuotojai, increaseHundredEuros);
+        spausdinti(darbuotojai);
     }
 
     static void spausdinti(Employee[] masyvas) {
