@@ -7,10 +7,31 @@ import java.util.List;
 public class BendriniaiMetodai {
 
     public static void main(String[] args) {
-        Integer[] skaiciai = {8, 1, 2, 5, 3, 4, 5, 6, 7};
+        Integer[] skaiciai = {8, 1, 2, 5, 3, 4, 5, 6, 7, 2};
         Double[] skaiciai2 = {10d, 20d, 30d, 40d, 50d};
         Character[] charai = {'z', 'y', 'a', 'b', 'c', 'd', 'e'};
-        String[] zodziai = {"aa", "bb", "cc", "dd", "cc", "cc", "ee"};
+        String[] zodziai = {"cc", "dd", "cc", "cc", "ee","aa", "ab", "bb", "a", "A", "!", "Egle Bumblauske" };
+
+        spausdinti(skaiciai);
+        spausdinti(charai);
+
+        BendrineKlase<String> bendras = new BendrineKlase("Labas vakaras");
+        System.out.println(bendras.getKintamasis());
+
+        BendrineKlase<Double> bendras2 = new BendrineKlase(5);
+        System.out.println(bendras2.getKintamasis());
+
+        Integer kiekKartojasiSkaiciai = kiekKartojasi(skaiciai, 2);
+        System.out.println(kiekKartojasiSkaiciai);
+
+        DviejuTipu<String, Integer> pora = new DviejuTipu("Raktas", 123);
+        System.out.println(pora);
+
+        selectionSort(skaiciai);
+        spausdinti(skaiciai);
+
+        selectionSort(zodziai);
+        spausdinti(zodziai);
     }
 
     public static <T> void spausdinti(T[] arr) {

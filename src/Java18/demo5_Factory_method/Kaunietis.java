@@ -10,4 +10,9 @@ public class Kaunietis implements IPerson {
     public String toString() {
         return "KaunietisPerson{" + getName() + "}";
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
 }
