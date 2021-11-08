@@ -10,13 +10,14 @@ public class Main {
 
         testQueue(new PriorityQueue<>());
 
+
     }
 
     private static void testQueue(Queue<Integer> queue) {
         queue.add(20);
         queue.add(30);
         queue.add(20);
-
+        queue.add(10);
         queue.add(50);
         queue.add(20);
         queue.add(10);
@@ -31,12 +32,12 @@ public class Main {
 
         System.out.println("Išmetam is sąrašo paskutinį, t.y. 10");
         queue.poll();
-        queue.peek();
+        System.out.println("Paskutinis elementas "  + queue.peek());
         System.out.print("Eilė:");
         for (Integer i : queue) {
             System.out.print(" " + i);
         }
         System.out.println();
-        Iterator iterator = queue.iterator();
+//        Iterator iterator = queue.iterator();
     }
 }

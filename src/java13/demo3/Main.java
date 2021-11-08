@@ -26,6 +26,7 @@ public class Main {
         map.put("dvidešimt", 20);
         map.put("šeši", 6);
         map.put("septyniasdešimt", 70);
+        map.put("dešimt", 10);
 
 
         System.out.print("Žodyno reikšmės:");

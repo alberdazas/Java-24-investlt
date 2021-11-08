@@ -28,11 +28,11 @@ public class Main {
 //        }
 //        list.forEach(x-> System.out.println(x));
 
-        System.out.println("Sulygiuota:");
-        Collections.sort(list);
-        for (Employee employee : list) {
-            System.out.println(employee);
-        }
+//        System.out.println("Sulygiuota:");
+//        Collections.sort(list);
+//        for (Employee employee : list) {
+//            System.out.println(employee);
+//        }
 
 
         // 7, 8, 9
@@ -72,17 +72,17 @@ public class Main {
 //        }
 
 
-        list.sort(new Comparator<Employee>() {
-            @Override
-            public int compare(Employee o1, Employee o2) {
-                return 0;
-            }
-        });
-        Collections.reverse(list);
-        System.out.println("Sulygiuota:");
-        for (Employee employee : list) {
-            System.out.println(employee);
-        }
+//        list.sort(new Comparator<Employee>() {
+//            @Override
+//            public int compare(Employee o1, Employee o2) {
+//                return 0;
+//            }
+//        });
+//        Collections.reverse(list);
+//        System.out.println("Sulygiuota:");
+//        for (Employee employee : list) {
+//            System.out.println(employee);
+//        }
 
 
     }

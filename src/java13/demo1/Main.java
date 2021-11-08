@@ -16,12 +16,12 @@ public class Main {
         list.add(0, 40);
 //        Collections.sort(list);
         System.out.print("Sąrašas:");
-        for (Integer i : list) {
-            System.out.print(" " + i);
+        for (Integer reiksme : list) {
+            System.out.print(" " + reiksme);
         }
-//        for(int i = 0; i < list.size(); i++) {
-//            System.out.println(list.get(i));
-//        }
+        for(int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+        }
         System.out.println();
 
         System.out.println("Ar yra 20? = " + list.contains(20));
