@@ -1,0 +1,32 @@
+Masinos:
+Car{gamintojas='VW', modelis='Passat', metai='2005', kaina=2500.0, variklioTuris=2.0, kuroTipas=DYZELINAS}
+Car{gamintojas='Opel', modelis='Astra', metai='2010', kaina=4000.0, variklioTuris=1.9, kuroTipas=DYZELINAS}
+Car{gamintojas='VW', modelis='Passat', metai='2010', kaina=5000.0, variklioTuris=2.0, kuroTipas=DYZELINAS}
+Car{gamintojas='VW', modelis='Golf', metai='1999', kaina=400.0, variklioTuris=1.9, kuroTipas=DYZELINAS}
+Car{gamintojas='Peugot', modelis='307', metai='2002', kaina=800.0, variklioTuris=2.0, kuroTipas=DYZELINAS}
+Car{gamintojas='Volvo', modelis='S60', metai='1997', kaina=600.0, variklioTuris=1.9, kuroTipas=DYZELINAS}
+Car{gamintojas='Toyota', modelis='Yaris', metai='2004', kaina=2000.0, variklioTuris=1.4, kuroTipas=BENZINAS}
+Car{gamintojas='Audi', modelis='A6', metai='2008', kaina=6000.0, variklioTuris=3.0, kuroTipas=BENZINAS}
+Car{gamintojas='Toyota', modelis='Corolla', metai='2002', kaina=1500.0, variklioTuris=2.0, kuroTipas=DYZELINAS}
+Car{gamintojas='BMW', modelis='320', metai='2007', kaina=4500.0, variklioTuris=2.0, kuroTipas=BENZINAS}
+Seniausia masina:
+Car{gamintojas='Volvo', modelis='S60', metai='1997', kaina=600.0, variklioTuris=1.9, kuroTipas=DYZELINAS}
+Naujausia masina:
+Car{gamintojas='Opel', modelis='Astra', metai='2010', kaina=4000.0, variklioTuris=1.9, kuroTipas=DYZELINAS}
+Naujesnes masinos nei 2008:
+Car{gamintojas='Opel', modelis='Astra', metai='2010', kaina=4000.0, variklioTuris=1.9, kuroTipas=DYZELINAS}
+Car{gamintojas='VW', modelis='Passat', metai='2010', kaina=5000.0, variklioTuris=2.0, kuroTipas=DYZELINAS}
+Pagamintos tarp 2000 ir 2008:
+Car{gamintojas='VW', modelis='Passat', metai='2005', kaina=2500.0, variklioTuris=2.0, kuroTipas=DYZELINAS}
+Car{gamintojas='Peugot', modelis='307', metai='2002', kaina=800.0, variklioTuris=2.0, kuroTipas=DYZELINAS}
+Car{gamintojas='Toyota', modelis='Yaris', metai='2004', kaina=2000.0, variklioTuris=1.4, kuroTipas=BENZINAS}
+Car{gamintojas='Toyota', modelis='Corolla', metai='2002', kaina=1500.0, variklioTuris=2.0, kuroTipas=DYZELINAS}
+Car{gamintojas='BMW', modelis='320', metai='2007', kaina=4500.0, variklioTuris=2.0, kuroTipas=BENZINAS}
+VW gamintojo masinos:
+Car{gamintojas='VW', modelis='Passat', metai='2005', kaina=2500.0, variklioTuris=2.0, kuroTipas=DYZELINAS}
+Car{gamintojas='VW', modelis='Passat', metai='2010', kaina=5000.0, variklioTuris=2.0, kuroTipas=DYZELINAS}
+Car{gamintojas='VW', modelis='Golf', metai='1999', kaina=400.0, variklioTuris=1.9, kuroTipas=DYZELINAS}
+Didziausia variklio turi turinti masina:
+Car{gamintojas='Audi', modelis='A6', metai='2008', kaina=6000.0, variklioTuris=3.0, kuroTipas=BENZINAS}
+Benzininiu Masinu kiekis: 3
+Dyzeliniu Masinu kiekis: 7

@@ -23,13 +23,20 @@ public class Main {
         list.add(new Employee(1, "Ona", "administracija", new BigDecimal("9.00")));
         list.add(new Employee(1, "Ona", "administracija", new BigDecimal("9.00")));
 
+
+
+        Employee darbuotojas = new Employee(1, "Ona", "administracija", new BigDecimal("11.00"));
+        Employee darbuotojas2 = new Employee(1, "Ona", "administracija", new BigDecimal("11.00"));
+        System.out.println(darbuotojas.hashCode());
+        System.out.println(darbuotojas2.hashCode());
+        darbuotojas.equals(darbuotojas2);
 //        for (Employee employee : list) {
 //            System.out.println(employee);
 //        }
 //        list.forEach(x-> System.out.println(x));
 
 //        System.out.println("Sulygiuota:");
-//        Collections.sort(list);
+        Collections.sort(list);
 //        for (Employee employee : list) {
 //            System.out.println(employee);
 //        }
