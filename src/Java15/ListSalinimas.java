@@ -17,12 +17,13 @@ public class ListSalinimas {
         zodziai.add(new Zmogus("Jonas", "Jonaitis", 16));
         zodziai.add(new Zmogus("Jonas", "Jonaitis", 19));
 
-
         System.out.println(zodziai);
         Iterator iter = zodziai.iterator();
         Zmogus lyginamas = new Zmogus("Jonas", "Jonaitis", 16);
+        // Concurrent modification exception
         while (iter.hasNext()) {
-            if (iter.next().equals(lyginamas)) {
+            Zmogus next = (Zmogus) iter.next();
+            if (next.equals(lyginamas)) {
                 iter.remove();
             }
         }
