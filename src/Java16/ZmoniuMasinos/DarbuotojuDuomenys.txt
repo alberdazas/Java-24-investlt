@@ -1,9 +1,8 @@
-Jonas Jonaitis AAA:111
-Darius Petraitis BBB:111
-Ona Marija CCC:111
-Neturi Masinos
-Dalia Dalyte DDD:111
-Benas Dailide EEE:111
-Ona Marija CCC:222
-Dalia Dalyte DDD:222
-Benas Dailide EEE:222
+1 Jonas Jonaitis AAA:111
+44 Darius Petraitis BBB:111
+33 Ona Marija CCC:111
+22 Dalia Dalyte DDD:111
+55 Benas Dailide EEE:111
+33 Ona Marija CCC:222
+22 Dalia Dalyte DDD:222
+55 Benas Dailide EEE:222

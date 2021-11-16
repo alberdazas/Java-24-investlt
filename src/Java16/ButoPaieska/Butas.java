@@ -1,6 +1,6 @@
 package Java16.ButoPaieska;
 
-public class Butas {
+public class Butas implements Comparable<Butas>{
     private String butoNumeris;
     private String adresas;
     private int kambariuSkaicius;
@@ -58,12 +58,27 @@ public class Butas {
 
     @Override
     public String toString() {
-        return "Butas{" +
-                "butoNumeris='" + butoNumeris + '\'' +
-                ", adresas='" + adresas + '\'' +
-                ", kambariuSkaicius=" + kambariuSkaicius +
-                ", kvadratura=" + kvadratura +
-                ", kaina=" + kaina +
-                '}';
+        return String.format("%-2s", butoNumeris) + " " +
+                String.format("%-25s", adresas) + " " + kambariuSkaicius
+                + " " + kvadratura + " " +
+                kaina;
+    }
+
+    @Override
+    public int compareTo(Butas o) {
+        if(o == null) {
+            return 1;
+        }
+
+//        Double kvadraturaWrapper = kvadratura;
+//        Double oKvadraturaWrapper = o.getKvadratura();
+//        return kvadraturaWrapper.compareTo(oKvadraturaWrapper);
+
+        if(kvadratura > o.getKvadratura()) {
+            return 1;
+        } else if(kvadratura < o.getKvadratura()) {
+            return -1;
+        }
+        return 0;
     }
 }

@@ -9,7 +9,7 @@ public class Kriterijus {
     private int maxKaina;
 
     public Kriterijus(int minKambariuSkaicius, int maxKambariuSkaicius,
-                      int minKvadratura, int maxKvadratura,
+                      double minKvadratura, double maxKvadratura,
                       int minKaina, int maxKaina) {
         this.minKambariuSkaicius = minKambariuSkaicius;
         this.maxKambariuSkaicius = maxKambariuSkaicius;
