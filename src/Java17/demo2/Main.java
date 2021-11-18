@@ -19,17 +19,23 @@ public class Main {
         list.add(new Employee("Ada", 1500.0, "administration"));
 
         System.out.println("stream:");
-//        list.stream().filter(new Predicate<Employee>() {
-//                                 @Override
-//                                 public boolean test(Employee employee) {
-//                                     return employee.getSalary() > 1300.0;
-//                                 }
-//        }).forEach(new Consumer<Employee>() {
-//            @Override
-//            public void accept(Employee employee) {
-//                System.out.println(employee);
-//            }
-//        });
+        Predicate<Employee> positive = x -> x.getSalary() > 1000;
+        list.stream().filter(positive)
+                .forEach(System.out::println);
+
+        System.out.println("stream:");
+        list.stream().filter(new Predicate<Employee>() {
+            @Override
+            public boolean test(Employee employee) {
+                return employee.getSalary() > 1000.0;
+            }
+        }).forEach(new Consumer<Employee>() {
+            @Override
+            public void accept(Employee employee) {
+                System.out.println(employee);
+            }
+        });
+        System.out.println("stream:");
         list.stream().filter((Employee employee) -> employee.getSalary() > 1000.0)
                 .forEach(System.out::println);
 
