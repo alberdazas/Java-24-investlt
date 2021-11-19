@@ -20,8 +20,17 @@ public class Main {
         list.add(new Employee("Petras", 1200.0, "sales"));
         list.add(new Employee("Ada", 1500.0, "administration"));
 
-        System.out.println("stream of List:");
+        System.out.println("stream of List one liner:");
         list.stream().filter(e -> e.getSalary() > 1000.0).forEach(System.out::println);
+
+        System.out.println("stream of List like method:");
+        list.stream().filter(e -> {
+            System.out.println("labas");
+
+            return e.getSalary() > 1000.0; }).forEach(System.out::println);
+
+        System.out.println("stream of List calls another method:");
+        list.stream().filter(e -> arAtitinka(e)).forEach(System.out::println);
 
         System.out.println("stream of parameters:");
         Stream.of(2, 3, 4).findAny().ifPresent(System.out::println);
@@ -34,5 +43,9 @@ public class Main {
                 new Random().ints(100, 1, 100).sum()
         );
 
+    }
+
+    static boolean arAtitinka(Employee darbuotojas) {
+        return darbuotojas.getSalary() > 500;
     }
 }
