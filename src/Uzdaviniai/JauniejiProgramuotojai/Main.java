@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 public class Main {
@@ -12,8 +14,12 @@ public class Main {
         String duomenys = "src/Uzdaviniai/JauniejiProgramuotojai/duomenys.txt";
         List<JaunasisProgramuotojas> programuotojai = new ArrayList<>();
         Integer atrinktuSkaicius = skaityti(duomenys, programuotojai);
-        System.out.println(atrinktuSkaicius);
-        System.out.println(programuotojai.size());
+        Collections.sort(programuotojai);
+        atrinktiGeriausius(programuotojai, atrinktuSkaicius);
+        System.out.println("Sudarytos klases mokiniu sarasas:");
+        for(JaunasisProgramuotojas laikinas: programuotojai) {
+            System.out.println(laikinas);
+        }
     }
 
     static Integer skaityti(String failoKelias, List<JaunasisProgramuotojas> x) {
@@ -42,5 +48,24 @@ public class Main {
             System.out.println("Netiketa klaida");
         }
         return priimamuSkaicius;
+    }
+
+    static void atrinktiGeriausius(List<JaunasisProgramuotojas> b, Integer kiekPalikti) {
+        Iterator itr = b.iterator();
+        int i = 1;
+        while(itr.hasNext()) {
+            itr.next();
+            if(i > kiekPalikti) {
+                itr.remove();
+            }
+            i++;
+        }
+    }
+
+    static void apkirptasSarasas(List<JaunasisProgramuotojas> x, Integer mokiniuSkaicius) {
+        int skirtumas = x.size() - mokiniuSkaicius;
+        for (int i = 0; i < skirtumas; i++) {
+            x.remove(x.size() - 1);
+        }
     }
 }

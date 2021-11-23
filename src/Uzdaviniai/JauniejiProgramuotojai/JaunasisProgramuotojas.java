@@ -1,6 +1,6 @@
 package Uzdaviniai.JauniejiProgramuotojai;
 
-public class JaunasisProgramuotojas {
+public class JaunasisProgramuotojas implements Comparable<JaunasisProgramuotojas> {
     private String vardas;
     private String pavarde;
     private Integer lygis;
@@ -38,5 +38,13 @@ public class JaunasisProgramuotojas {
     @Override
     public String toString() {
         return vardas + " " + pavarde + " " + lygis;
+    }
+
+    @Override
+    public int compareTo(JaunasisProgramuotojas o) {
+        if(o == null) {
+            return 1;
+        }
+        return lygis.compareTo(o.getLygis());
     }
 }
