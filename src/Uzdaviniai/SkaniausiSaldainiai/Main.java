@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -13,7 +14,19 @@ public class Main {
         List<Gamintojas> gamintojai = new ArrayList<>();
         skaityti(duomenys, gamintojai);
         System.out.println(gamintojai.size());
+        for(Gamintojas g: gamintojai) {
+            Collections.sort(g.getSaldainiai());
+        }
+
+        for(Gamintojas g: gamintojai) {
+            System.out.println(g.getPavadinimas());
+            for(Saldainis s: g.getSaldainiai()) {
+                System.out.println(s);
+            }
+        }
     }
+
+
 
     static void skaityti(String failoKelias, List<Gamintojas> a) {
         BufferedReader br;

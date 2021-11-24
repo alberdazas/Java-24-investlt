@@ -1,6 +1,6 @@
 package Uzdaviniai.SkaniausiSaldainiai;
 
-public class Saldainis {
+public class Saldainis implements Comparable<Saldainis>{
     private String pavadinimas;
     private Integer vertinimas;
 
@@ -28,5 +28,17 @@ public class Saldainis {
     @Override
     public String toString() {
         return pavadinimas + " " + vertinimas;
+    }
+
+    @Override
+    public int compareTo(Saldainis o) {
+        if(o == null) {
+            return 1;
+        }
+        int result = vertinimas.compareTo(o.getVertinimas());
+        if(result != 0) {
+            return result;
+        }
+        return pavadinimas.compareTo(o.getPavadinimas());
     }
 }
