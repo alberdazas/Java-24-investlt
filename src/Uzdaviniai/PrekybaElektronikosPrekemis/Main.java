@@ -13,9 +13,12 @@ public class Main {
         Map<String, Preke> prekes = skaityti(duomenys);
         Preke populiariausia = gautiPopuliariausia(prekes);
         System.out.println("Populiariausias: " + populiariausia);
-
+        System.out.println();
         Preke pelningiausia = gautiPelningiausia(prekes);
         System.out.println("Pelningiausias: " + pelningiausia);
+        System.out.println();
+        Preke maziausiaiPopuliari = gautiMaziausiaiPopuliaria(prekes);
+        System.out.println("Maziausiai populiarus: " + maziausiaiPopuliari);
 
     }
 
@@ -83,6 +86,20 @@ public class Main {
             }
         }
         return pelningiausia;
+    }
+
+    static Preke gautiMaziausiaiPopuliaria(Map<String, Preke> zemelapis) {
+        Preke min = null;
+        for (Preke preke : zemelapis.values()) {
+            if(min == null) {
+                min = preke;
+                continue;
+            }
+            if(min.getKiekis() > preke.getKiekis()) {
+                min = preke;
+            }
+        }
+        return min;
     }
 
 }
