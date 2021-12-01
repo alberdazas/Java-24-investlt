@@ -2,7 +2,7 @@ package Uzdaviniai.IdomiausiFilmai;
 
 import java.time.LocalTime;
 
-public class Filmas {
+public class Filmas implements Comparable<Filmas> {
     private Integer metai;
     private String pavadinimas;
     private LocalTime trukme;
@@ -53,5 +53,17 @@ public class Filmas {
     @Override
     public String toString() {
         return metai + " " + pavadinimas + " " + trukme + " " + ziurovuSkaicius;
+    }
+
+    @Override
+    public int compareTo(Filmas o) {
+        if(o == null) {
+            return 1;
+        }
+        int res = trukme.compareTo(o.trukme);
+        if(res == 0) {
+            return res;
+        }
+        return ziurovuSkaicius.compareTo(o.getZiurovuSkaicius());
     }
 }
