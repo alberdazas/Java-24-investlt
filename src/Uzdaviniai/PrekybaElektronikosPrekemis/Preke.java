@@ -44,4 +44,13 @@ public class Preke {
     public void setKiekis(Integer kiekis) {
         this.kiekis = kiekis;
     }
+
+    public Double getSuma() {
+        return getKaina() * getKiekis();
+    }
+
+    @Override
+    public String toString() {
+        return pavadinimas + "\n" + "Parduota: " + kiekis + " vnt." + "\n" + "Surinkta: " + getSuma() + " Lt";
+    }
 }
